@@ -1,86 +1,31 @@
-CRAN: Package kmed                 table td { vertical-align: top; } 
+# kmed: Distance-Based k-Medoids Clustering
 
-kmed: Distance-Based k-Medoids
-------------------------------
+[![CRAN Version](https://www.r-pkg.org/badges/version/kmed)](https://CRAN.R-project.org/package=kmed)
+[![License: GPL-3](https://img.shields.io/badge/License-GPL--3-blue.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 
-Algorithms of distance-based k-medoids clustering: simple and fast k-medoids, ranked k-medoids, and increasing number of clusters in k-medoids. Calculate distances for mixed variable data such as Gower, Podani, Wishart, Huang, Harikumar-PV, and Ahmad-Dey. Cluster validation applies internal and relative criteria. The internal criteria includes silhouette index and shadow values. The relative criterium applies bootstrap procedure producing a heatmap with a flexible reordering matrix algorithm such as complete, ward, or average linkages. The cluster result can be plotted in a marked barplot or pca biplot.
+## Overview
 
-Version:
+The `kmed` package provides a specialized suite of algorithms for **distance-based k-medoids clustering**. Unlike the standard k-means approach, k-medoids is highly robust against outliers and is capable of processing any distance or dissimilarity matrix. This makes it an essential tool for datasets where Euclidean distance is not applicable, such as those containing categorical, ordinal, or mixed-type variables.
 
-0.4.2
+The package is designed for statistical researchers and practitioners who require flexible clustering solutions for complex, non-Euclidean data structures.
 
-Depends:
+## Key Features
 
-R (≥ 2.10)
+* **Diverse Algorithms:** Implements several k-medoids variants, including:
+    * **Simple K-Medoids (SKM)** and **Fast K-Medoids (FKM)**.
+    * **Ranked K-Medoids (RKM)**.
+    * **Increasing Number of Clusters (INCO)** for determining optimal cluster partitions.
+* **Mixed-Type Data Support:** Optimized functions for calculating distances in heterogeneous datasets using specialized metrics:
+    * **Gower**, **Podani**, and **Wishart** distances.
+    * **Huang**, **Harikumar-PV**, and **Ahmad-Dey** dissimilarities.
+* **Cluster Validation:** Built-in tools for evaluating clustering quality, including:
+    * **Internal Criteria:** Silhouette Index and Shadow Values.
+    * **Relative Criteria:** Bootstrap procedures for cluster stability.
+* **Visualization:** Advanced support for bootstrap-based heatmaps, marked barplots, and PCA biplots to facilitate the interpretation of clustering results.
 
-Imports:
+## Installation
 
-[ggplot2](../ggplot2/index.html)
+The stable version of `kmed` is available on [CRAN](https://CRAN.R-project.org/package=kmed). You can install it directly via the R console using the following command:
 
-Suggests:
-
-[knitr](../knitr/index.html), [rmarkdown](../rmarkdown/index.html)
-
-Published:
-
-2022-08-29
-
-DOI:
-
-[10.32614/CRAN.package.kmed](https://doi.org/10.32614/CRAN.package.kmed)
-
-Author:
-
-Weksi Budiaji \[aut, cre\]
-
-Maintainer:
-
-Weksi Budiaji <budiaji at untirta.ac.id>
-
-License:
-
-[GPL-3](../../licenses/GPL-3)
-
-NeedsCompilation:
-
-no
-
-Materials:
-
-[NEWS](news/news.html)
-
-CRAN checks:
-
-[kmed results](../../checks/check_results_kmed.html)
-
-#### Documentation:
-
-Reference manual:
-
-[kmed.html](refman/kmed.html) , [kmed.pdf](kmed.pdf)
-
-Vignettes:
-
-[kmed: Distance-Based K-Medoids](vignettes/kmedoid.html) ([source](vignettes/kmedoid.Rmd), [R code](vignettes/kmedoid.R))  
-
-#### Downloads:
-
-Package source:
-
-[kmed\_0.4.2.tar.gz](../../../src/contrib/kmed_0.4.2.tar.gz)
-
-Windows binaries:
-
-r-devel: [kmed\_0.4.2.zip](../../../bin/windows/contrib/4.6/kmed_0.4.2.zip), r-release: [kmed\_0.4.2.zip](../../../bin/windows/contrib/4.5/kmed_0.4.2.zip), r-oldrel: [kmed\_0.4.2.zip](../../../bin/windows/contrib/4.4/kmed_0.4.2.zip)
-
-macOS binaries:
-
-r-release (arm64): [kmed\_0.4.2.tgz](../../../bin/macosx/big-sur-arm64/contrib/4.5/kmed_0.4.2.tgz), r-oldrel (arm64): [kmed\_0.4.2.tgz](../../../bin/macosx/big-sur-arm64/contrib/4.4/kmed_0.4.2.tgz), r-release (x86\_64): [kmed\_0.4.2.tgz](../../../bin/macosx/big-sur-x86_64/contrib/4.5/kmed_0.4.2.tgz), r-oldrel (x86\_64): [kmed\_0.4.2.tgz](../../../bin/macosx/big-sur-x86_64/contrib/4.4/kmed_0.4.2.tgz)
-
-Old sources:
-
-[kmed archive](https://CRAN.R-project.org/src/contrib/Archive/kmed)
-
-#### Linking:
-
-Please use the canonical form [https://CRAN.R-project.org/package=kmed](https://CRAN.R-project.org/package=kmed) to link to this page.
+```r
+install.packages("kmed")
