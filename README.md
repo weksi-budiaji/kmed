@@ -29,12 +29,12 @@ The stable version of `kmed` is available on [CRAN](https://CRAN.R-project.org/p
 
 ```r
 install.packages("kmed")
-
+```
 ## Load Package
 
 ```r
 library(kmed)
-
+```
 ## Citation
 
 If the kmed package facilitates your academic research or professional projects, please cite the author as follows:
