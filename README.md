@@ -29,3 +29,21 @@ The stable version of `kmed` is available on [CRAN](https://CRAN.R-project.org/p
 
 ```r
 install.packages("kmed")
+
+## Load Package
+
+```r
+library(kmed)
+
+## Citation
+
+If the kmed package facilitates your academic research or professional projects, please cite the author as follows:
+
+Budiaji, W. (2022). kmed: Distance-Based k-Medoids. R package version 0.4.2. Available at https://CRAN.R-project.org/package=kmed
+
+## Author & Maintainer
+
+Weksi Budiaji Universitas Sultan Ageng Tirtayasa (UNTIRTA) Email: budiaji@untirta.ac.id
+
+
+
