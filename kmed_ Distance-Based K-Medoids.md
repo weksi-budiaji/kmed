@@ -90,6 +90,7 @@ iris[1:3,]
     ## 2          4.9         3.0          1.4         0.2  setosa
     ## 3          4.7         3.2          1.3         0.2  setosa
 
+<a id="mrw"></a>
 #### 2.A.1. Manhattan weighted by range (`method = "mrw"`)
 
 By applying the `distNumeric` function with `method = "mrw"`, the
