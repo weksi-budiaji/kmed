@@ -139,7 +139,7 @@ which is based on the data
 
 [(Back to Intoduction)](#intro)
 
-<a id="#ser"></a>
+<a id="ser"></a>
 #### 2.A.2. squared Euclidean weighted by range (`method = "ser"`)
 
 ``` {.sourceCode .r}
@@ -166,7 +166,7 @@ is `0.11527778`. It is obtained by
 
 [(Back to Intoduction)](#intro)
 
-<a id="#ser.2"></a>
+<a id="ser.2"></a>
 #### 2.A.3. squared Euclidean weighted by squared range (`method = "ser.2"`)
 
 ``` {.sourceCode .r}
@@ -199,7 +199,7 @@ where the data are
 
 [(Back to Intoduction)](#intro)
 
-<a id="#sev"></a>
+<a id="sev"></a>
 #### 2.A.4. squared Euclidean weighted by variance (`method = "sev"`)
 
 ``` {.sourceCode .r}
@@ -238,7 +238,7 @@ Then, the distance between objects 1 and 2 is
 
 [(Back to Intoduction)](#intro)
 
-<a id="#se"></a>
+<a id="se"></a>
 #### 2.A.5. squared Euclidean (`method = "se"`)
 
 ``` {.sourceCode .r}
@@ -280,7 +280,7 @@ rownames(bin) <- 1:nrow(bin)
 colnames(bin) <- c("x", "y")
 ```
 
-<a id="#sm"></a>
+<a id="sm"></a>
 #### 2.B.1. Simple matching (`matching`)
 
 The `matching` function calculates the simple matching distance between
@@ -328,7 +328,7 @@ distance between objects 1 and 2 is `(0+1)/2` that is equal to `1/2`.
 
 [(Back to Intoduction)](#intro)
 
-<a id="#cooc"></a>
+<a id="cooc"></a>
 #### 2.B.2. Co-occurrence distance (`cooccur`)
 
 The co-ocurrence distance [(Ahmad and Dey 2007; Harikumar and PV
@@ -477,7 +477,7 @@ colnames(mixdata) <- c(paste(c("num"), 1:2, sep = ""),
                        paste(c("cat"), 1:2, sep = ""))
 ```
 
-<a id="#gower"></a>
+<a id="gower"></a>
 #### 2.C.1 Gower (`method = "gower"`)
 
 The `method = "gower"` in the `distmix` function calculates the [Gower
@@ -546,7 +546,7 @@ similarity. The distance between objects 3 and 4 is then
 [(Back to Intoduction)](#intro)
 
 
-<a id="#wishart"></a>
+<a id="wishart"></a>
 #### 2.C.2 Wishart (`method = "wishart"`)
 
 The [Wishart (2003)]{.citation} distance can be calculated via
@@ -593,7 +593,7 @@ sqrt(wish)
 [(Back to Intoduction)](#intro)
 
 
-<a id="#podani"></a>
+<a id="podani"></a>
 #### 2.C.3 Podani (`method = "podani"`)
 
 The `method = "podani"` in the `distmix` function calculates the [Podani
@@ -677,7 +677,7 @@ distance between objects 3 and 4 is
 
 [(Back to Intoduction)](#intro)
 
-<a id="#harikumar"></a>
+<a id="harikumar"></a>
 #### 2.C.5 Harikumar and PV (`method = "harikumar"`)
 
 The [Harikumar and PV (2015)]{.citation} distance can be calculated via
@@ -728,7 +728,7 @@ where the data are
 
 [(Back to Intoduction)](#intro)
 
-<a id="#ahmad"></a>
+<a id="ahmad"></a>
 #### 2.C.6 Ahmad and Dey (`method = "ahmad"`)
 
 The `method = "ahmad"` in the `distmix` function calculates the [Ahmad
@@ -790,7 +790,7 @@ In this section, the algorithms are applied in the `iris` data set by
 applying the `mrw` distance (see [Manhattan weighted by range](#mrw)).
 The number of clusters in this data set is 3.
 
-<a id="#sfkm"></a>
+<a id="sfkm"></a>
 ### 3.A. Simple and fast k-medoids algorithm (`fastkmed`)
 
 The simple and fast k-medoid (SFKM) algorithm has been proposed by [Park
@@ -851,7 +851,7 @@ weighted by range, the misclassification rate is
 
 [(Back to Intoduction)](#intro)
 
-<a id="#km"></a>
+<a id="km"></a>
 ### 3.B. K-medoids algorithm
 
 [Reynolds et al. (2006)]{.citation} has been proposed a k-medoids (KM)
@@ -923,7 +923,7 @@ better (`8`%).
 
 [(Back to Intoduction)](#intro)
 
-<a id="#rkm"></a>
+<a id="rkm"></a>
 ### 3.C. Rank k-medoids algorithm (`rankkmed`)
 
 A rank k-medoids (RKM) has been proposed by [Zadegan, Mirzaie, and
@@ -987,7 +987,7 @@ the three previous algorithms.
 
 [(Back to Intoduction)](#intro)
 
-<a id="#inckm"></a>
+<a id="inckm"></a>
 ### 3.D. Increasing number of clusters k-medoids algorithm (`inckmed`)
 
 [Yu et al. (2018)]{.citation} has been proposed an increasing number of
@@ -1053,7 +1053,7 @@ set with the `mrw` distance.
 
 [(Back to Intoduction)](#intro)
 
-<a id="#skm"></a>
+<a id="skm"></a>
 ### 3.E. Simple k-medoids algorithm (`skm`)
 
 The simple k-medoid (SKM) algorithm has been proposed by [Budiaji and
@@ -1124,7 +1124,7 @@ internal and relative criteria validations.
 
 ### 4.A. Internal criteria
 
-<a id="#sil"></a>
+<a id="sil"></a>
 ### 4.A.1. Silhouette (`sil`)
 
 [Rousseeuw (1987)]{.citation} has proposed a silhouette index as an
@@ -1167,7 +1167,7 @@ siliris$plot
 
 [(Back to Intoduction)](#intro)
 
-<a id="#csv"></a>
+<a id="csv"></a>
 ### 4.A.2. Centroid-based shadow value (`csv`)
 
 An other way to measure internal validation with its corresponding plot
@@ -1213,7 +1213,7 @@ csviris$plot
 
 [(Back to Intoduction)](#intro)
 
-<a id="#msv"></a>
+<a id="msv"></a>
 ### 4.A.3. Medoid-based shadow value (`msv`)
 
 An other way to measure internal validation by combining silhoutte and
@@ -1257,7 +1257,7 @@ msviris$plot
 
 [(Back to Intoduction)](#intro)
 
-<a id="#boot"></a>
+<a id="boot"></a>
 ### 4.B. Relative criteria
 
 The relative criteria evaluate a clustering algorithm result by applying
@@ -1381,7 +1381,7 @@ A cluster visualization of the clustering result can enhance the data
 structure understanding. The biplot and marked barplot are presented to
 visualize the clustering result.
 
-<a id="#biplot"></a>
+<a id="biplot"></a>
 ### A. Biplot
 
 The `pcabiplot` function can be applied to plot a clustering result from
@@ -1415,7 +1415,7 @@ pcabiplot(pcadat, y = "PC3",colobj = rkm$cluster, o.size = 1.5)
 
 [(Back to Intoduction)](#intro)
 
-<a id="#barplotnum"></a>
+<a id="barplotnum"></a>
 ### B. Marked barplot
 
 A marked barplot has been proposed by [Dolnicar and Leisch
