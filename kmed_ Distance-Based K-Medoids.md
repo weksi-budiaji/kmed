@@ -1,10 +1,9 @@
-# kmed: Distance-Based K-Medoids {#kmed-distance-based-k-medoids .title .toc-ignore}
+# kmed: Distance-Based K-Medoids
 
-#### Weksi Budiaji {#weksi-budiaji .author}
+#### Weksi Budiaji
 
-#### 2022-08-29 {#section .date}
+#### 2022-08-29
 
-::: abstract
 Abstract
 
 The [**kmed**](https://cran.r-project.org/package=kmed) vignette
@@ -18,9 +17,7 @@ k-medoids. After the clustering result is obtained, a validation step is
 required. The cluster validation applies internal and relative criteria.
 The last part is visualizing the cluster result in a biplot or marked
 barplot.
-:::
 
-::: {#intro .section .level2}
 ## 1. Introduction
 
 The [**kmed**](https://cran.r-project.org/package=kmed) package is
@@ -58,12 +55,9 @@ designed to analyse k-medoids based clustering. The features include:
 -   Cluster visualizations:
     -   [pca biplot](#biplot)
     -   [marked barplot](#barplotnum)
-:::
 
-::: {#distance-computation .section .level2}
 ## 2. Distance Computation
 
-::: {#a.-numerical-variables-distnumeric .section .level3}
 ### 2.A. Numerical variables (`distNumeric`)
 
 The `distNumeric` function can be applied to calculate numerical
@@ -79,33 +73,27 @@ in the iris data set. An example of manual calculation of the numerical
 distances is applied for the first and second objects only to introduce
 what the `distNumeric` function does.
 
-::: {#cb1 .sourceCode}
 ``` {.sourceCode .r}
 library(kmed)
 ```
-:::
 
     ## Warning: replacing previous import 'lifecycle::last_warnings' by
     ## 'rlang::last_warnings' when loading 'pillar'
 
-::: {#cb3 .sourceCode}
 ``` {.sourceCode .r}
 iris[1:3,]
 ```
-:::
 
     ##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
     ## 1          5.1         3.5          1.4         0.2  setosa
     ## 2          4.9         3.0          1.4         0.2  setosa
     ## 3          4.7         3.2          1.3         0.2  setosa
 
-::: {#mrw .section .level4}
 #### 2.A.1. Manhattan weighted by range (`method = "mrw"`)
 
 By applying the `distNumeric` function with `method = "mrw"`, the
 distance among objects in the iris data set can be obtained.
 
-::: {#cb5 .sourceCode}
 ``` {.sourceCode .r}
 num <- as.matrix(iris[,1:4])
 rownames(num) <- rownames(iris)
@@ -114,7 +102,6 @@ mrwdist <- distNumeric(num, num)
 #show the distance among objects 1 to 3
 mrwdist[1:3,1:3]
 ```
-:::
 
     ##           1         2         3
     ## 1 0.0000000 0.2638889 0.2530603
@@ -125,24 +112,20 @@ The Manhattan weighted by range distance between objects 1 and 2 is
 `0.2638889`. To calculate this distance, the range of each variable is
 computed.
 
-::: {#cb7 .sourceCode}
 ``` {.sourceCode .r}
 #extract the range of each variable
 apply(num, 2, function(x) max(x)-min(x))
 ```
-:::
 
     ## Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
     ##          3.6          2.4          5.9          2.4
 
 Then, the distance between objects 1 and 2 is
 
-::: {#cb9 .sourceCode}
 ``` {.sourceCode .r}
 #the distance between objects 1 and 2
 abs(5.1-4.9)/3.6 + abs(3.5 - 3.0)/2.4 + abs(1.4-1.4)/5.9 + abs(0.2-0.2)/2.4
 ```
-:::
 
     ## [1] 0.2638889
 
@@ -153,19 +136,15 @@ which is based on the data
     ## 2          4.9         3.0          1.4         0.2
 
 [(Back to Intoduction)](#intro)
-:::
 
-::: {#ser .section .level4}
 #### 2.A.2. squared Euclidean weighted by range (`method = "ser"`)
 
-::: {#cb12 .sourceCode}
 ``` {.sourceCode .r}
 #calculate the squared Euclidean weighthed by range distance of all iris objects
 serdist <- distNumeric(num, num, method = "ser")
 #show the distance among objects 1 to 3
 serdist[1:3,1:3]
 ```
-:::
 
     ##            1          2          3
     ## 1 0.00000000 0.11527778 0.08363936
@@ -175,19 +154,15 @@ serdist[1:3,1:3]
 The squared Euclidean weighted by range distance between objects 1 and 2
 is `0.11527778`. It is obtained by
 
-::: {#cb14 .sourceCode}
 ``` {.sourceCode .r}
 #the distance between objects 1 and 2
 (5.1-4.9)^2/3.6 + (3.5 - 3.0)^2/2.4 + (1.4-1.4)^2/5.9 + (0.2-0.2)^2/2.4
 ```
-:::
 
     ## [1] 0.1152778
 
 [(Back to Intoduction)](#intro)
-:::
 
-::: {#ser.2 .section .level4}
 #### 2.A.3. squared Euclidean weighted by squared range (`method = "ser.2"`)
 
 ::: {#cb16 .sourceCode}
