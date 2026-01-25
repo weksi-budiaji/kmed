@@ -331,8 +331,8 @@ distance between objects 1 and 2 is `(0+1)/2` that is equal to `1/2`.
 <a id="cooc"></a>
 #### 2.B.2. Co-occurrence distance (`cooccur`)
 
-The co-ocurrence distance [(Ahmad and Dey 2007; Harikumar and PV
-2015)]{.citation} can be calculated via the `cooccur` function. To
+The co-ocurrence distance (Ahmad and Dey 2007; Harikumar and PV
+2015) can be calculated via the `cooccur` function. To
 calculate the distance between objects, the distribution of the
 variables are taken into consideration. Compared to the simple matching
 distance, the co-occurrence distance redefines the score of **match**
@@ -480,8 +480,8 @@ colnames(mixdata) <- c(paste(c("num"), 1:2, sep = ""),
 <a id="gower"></a>
 #### 2.C.1 Gower (`method = "gower"`)
 
-The `method = "gower"` in the `distmix` function calculates the [Gower
-(1971)]{.citation} distance. The original Gower distance allows missing
+The `method = "gower"` in the `distmix` function calculates the Gower
+(1971) distance. The original Gower distance allows missing
 values, while it is not allowed in the `distmix` function.
 
 ``` {.sourceCode .r}
@@ -549,7 +549,7 @@ similarity. The distance between objects 3 and 4 is then
 <a id="wishart"></a>
 #### 2.C.2 Wishart (`method = "wishart"`)
 
-The [Wishart (2003)]{.citation} distance can be calculated via
+The Wishart (2003) distance can be calculated via
 `method = "wishart"`. Although it allows missing values, it is again
 illegitimate in the `distmix` function. The Wishart distance for the
 `mixdata` is
@@ -596,8 +596,8 @@ sqrt(wish)
 <a id="podani"></a>
 #### 2.C.3 Podani (`method = "podani"`)
 
-The `method = "podani"` in the `distmix` function calculates the [Podani
-(1999)]{.citation} distance. Similar to The Gower and Wishart distances,
+The `method = "podani"` in the `distmix` function calculates the Podani
+(1999) distance. Similar to The Gower and Wishart distances,
 it allows missing values, yet it is not allowed in the `distmix`
 function. The Podani distance for the `mixdata` is
 
@@ -638,8 +638,8 @@ which is based on data
 <a id="huang"></a>
 #### 2.C.4 Huang (`method = "huang"`)
 
-The `method = "huang"` in the `distmix` function calculates the [Huang
-(1997)]{.citation} distance. The Huang distance of the `mixdata` data
+The `method = "huang"` in the `distmix` function calculates the Huang
+(1997) distance. The Huang distance of the `mixdata` data
 set is
 
 ``` {.sourceCode .r}
@@ -680,7 +680,7 @@ distance between objects 3 and 4 is
 <a id="harikumar"></a>
 #### 2.C.5 Harikumar and PV (`method = "harikumar"`)
 
-The [Harikumar and PV (2015)]{.citation} distance can be calculated via
+The Harikumar and PV (2015) distance can be calculated via
 `method = "harikumar"`. The Harikumar and PV distance for the `mixdata`
 is
 
@@ -731,8 +731,8 @@ where the data are
 <a id="ahmad"></a>
 #### 2.C.6 Ahmad and Dey (`method = "ahmad"`)
 
-The `method = "ahmad"` in the `distmix` function calculates the [Ahmad
-and Dey (2007)]{.citation} distance. The Ahmad and Dey distance of the
+The `method = "ahmad"` in the `distmix` function calculates the Ahmad
+and Dey (2007) distance. The Ahmad and Dey distance of the
 `mixdata` data set is
 
 ``` {.sourceCode .r}
@@ -793,8 +793,8 @@ The number of clusters in this data set is 3.
 <a id="sfkm"></a>
 ### 3.A. Simple and fast k-medoids algorithm (`fastkmed`)
 
-The simple and fast k-medoid (SFKM) algorithm has been proposed by [Park
-and Jun (2009)]{.citation}. The `fastkmed` function runs this algorithm
+The simple and fast k-medoid (SFKM) algorithm has been proposed by Park
+and Jun (2009). The `fastkmed` function runs this algorithm
 to cluster the objects. The compulsory inputs are a distance matrix or
 distance object and a number of clusters. Hence, the SFKM algorithm for
 the `iris` data set is
@@ -854,7 +854,7 @@ weighted by range, the misclassification rate is
 <a id="km"></a>
 ### 3.B. K-medoids algorithm
 
-[Reynolds et al. (2006)]{.citation} has been proposed a k-medoids (KM)
+Reynolds et al. (2006) has been proposed a k-medoids (KM)
 algorithm. It is similar to the [SFKM](#sfkm) such that the `fastkmed`
 can be applied. The difference is in the initial medoid selection where
 the KM selects the initial medoid randomly. Thus, the KM algorithm for
@@ -926,8 +926,8 @@ better (`8`%).
 <a id="rkm"></a>
 ### 3.C. Rank k-medoids algorithm (`rankkmed`)
 
-A rank k-medoids (RKM) has been proposed by [Zadegan, Mirzaie, and
-Sadoughi (2013)]{.citation}. The `rankkmed` function runs the RKM
+A rank k-medoids (RKM) has been proposed by Zadegan, Mirzaie, and
+Sadoughi (2013). The `rankkmed` function runs the RKM
 algorithm. The `m` argument is introduced to calculate a hostility
 score. The `m` indicates how many closest objects is selected. The
 selected objects as initial medoids in the RKM is randomly assigned. The
@@ -990,7 +990,7 @@ the three previous algorithms.
 <a id="inckm"></a>
 ### 3.D. Increasing number of clusters k-medoids algorithm (`inckmed`)
 
-[Yu et al. (2018)]{.citation} has been proposed an increasing number of
+Yu et al. (2018) has been proposed an increasing number of
 clusters k-medoids (INCKM) algorithm. This algorithm is implemented in
 the `inckmed` function. The `alpha` argument indicates a stretch factor
 to select the initial medoids. The [SFKM](#sfkm), [KM](#km) and
@@ -1056,8 +1056,8 @@ set with the `mrw` distance.
 <a id="skm"></a>
 ### 3.E. Simple k-medoids algorithm (`skm`)
 
-The simple k-medoid (SKM) algorithm has been proposed by [Budiaji and
-Leisch (2019)]{.citation}. The `skm` function runs this algorithm to
+The simple k-medoid (SKM) algorithm has been proposed by Budiaji and
+Leisch (2019). The `skm` function runs this algorithm to
 cluster the objects. The compulsory inputs are a distance matrix or
 distance object and a number of clusters. Hence, the SKM algorithm for
 the `iris` data set is
@@ -1127,7 +1127,7 @@ internal and relative criteria validations.
 <a id="sil"></a>
 ### 4.A.1. Silhouette (`sil`)
 
-[Rousseeuw (1987)]{.citation} has proposed a silhouette index as an
+Rousseeuw (1987) has proposed a silhouette index as an
 internal measure of validation. It is based on the average distance of
 objects within a cluster and between the nearest cluster. The `sil`
 function calculates the silhouette index of clustering result. The
@@ -1171,8 +1171,8 @@ siliris$plot
 ### 4.A.2. Centroid-based shadow value (`csv`)
 
 An other way to measure internal validation with its corresponding plot
-is by presenting the centroid-based shadow value [(Leisch
-2010)]{.citation}. The `csv` function calculates and plots the
+is by presenting the centroid-based shadow value (Leisch
+2010). The `csv` function calculates and plots the
 centroid-base shadow value of each object, which is based on the first
 and second closest medoids. The centroid of the original version of the
 csv is replaced by medoids in the `csv` function to adapt the k-medoids
@@ -1217,8 +1217,8 @@ csviris$plot
 ### 4.A.3. Medoid-based shadow value (`msv`)
 
 An other way to measure internal validation by combining silhoutte and
-csv properties is by a medoid-based shadow value (msv) [(Budiaji
-2019)]{.citation}. The `msv` function calculates and plots the
+csv properties is by a medoid-based shadow value (msv) (Budiaji
+2019). The `msv` function calculates and plots the
 medoid-based shadow value of each object, which is based on the first
 and second closest medoids.
 
@@ -1263,7 +1263,7 @@ msviris$plot
 The relative criteria evaluate a clustering algorithm result by applying
 re-sampling strategy. Thus, a bootstrap strategy can be applied. It is
 expected that the result of the cluster bootstraping is robust over all
-replications [(Dolnicar and Leisch 2010)]{.citation}. There are three
+replications (Dolnicar and Leisch 2010). There are three
 steps to validate the cluster result via the boostraping strategy.
 
 #### Step 1 Creating a matrix of bootstrap replicates
@@ -1323,7 +1323,7 @@ The matrix of bootstrap replicates produced by the `clustboot` in the
 dimension of *n x n* via the `consensusmatrix` function. An element of
 the consensus matrix in row *i* dan column *j* is an agreement value
 between objects *i* and *j* to be in the same cluster when they are
-taken as a sample at the same time [(Monti et al. 2003)]{.citation}.
+taken as a sample at the same time (Monti et al. 2003).
 
 However, it requires an algorithm to order the objects in such a way
 that objects in the same cluster are close to each other. The
@@ -1363,7 +1363,7 @@ consensusrkm[c(1:4),c(1:4)]
 The ordered consensus matrix in the [step 2](#stp2) can be visualized in
 a heatmap applying the `clustheatmap` function. The agreement indices in
 the consensus matrix can be transformed via a non-linear transformation
-[(Hahsler and Hornik 2011)]{.citation}. Thus, the `consensusrkm` can
+(Hahsler and Hornik 2011). Thus, the `consensusrkm` can
 visualize into
 
 ``` {.sourceCode .r}
@@ -1418,8 +1418,8 @@ pcabiplot(pcadat, y = "PC3",colobj = rkm$cluster, o.size = 1.5)
 <a id="barplotnum"></a>
 ### B. Marked barplot
 
-A marked barplot has been proposed by [Dolnicar and Leisch
-(2014)]{.citation}; [Leisch (2008)]{.citation} where the mark indicates
+A marked barplot has been proposed by Dolnicar and Leisch
+(2014); Leisch (2008) where the mark indicates
 a significant difference between the cluster's mean and population's
 mean in each variable. The `barplot` function creates a barplot of each
 cluster with a particular significant level. The layout of the barplot
@@ -1446,127 +1446,87 @@ barplotnum(iris[,1:4], rkm$cluster, nc = 2, alpha = 0.01)
 [(Back to Intoduction)](#intro)
 
 ------------------------------------------------------------------------
-# References {#references .unnumbered}
+# References
 
-::: {#refs .references .csl-bib-body .hanging-indent}
-::: {#ref-ahmad .csl-entry}
+
 Ahmad, A., and L. Dey. 2007. "A K-Mean Clustering Algorithm for Mixed
 Numeric and Categorical Data." *Data and Knowledge Engineering* 63
 (November): 503--27. <https://doi.org/10.1016/j.datak.2007.03.016>.
-:::
 
-::: {#ref-budiaji2 .csl-entry}
 Budiaji, W. 2019. "Medoid-Based Shadow Value Validation and
 Visualization." *International Journal of Advances in Intelligent
 Informatics* 5 (July): 76--88.
 <https://doi.org/10.26555/ijain.v5i2.326>.
-:::
 
-::: {#ref-budiaji1 .csl-entry}
 Budiaji, W., and F. Leisch. 2019. "Simple K-Medoids Partitioning
 Algorithm for Mixed Variable Data." *Algorithms* 12 (August): 177.
 <https://doi.org/10.3390/a12090177>.
-:::
 
-::: {#ref-dolnicar .csl-entry}
 Dolnicar, S., and F. Leisch. 2010. "Evaluation of Structure and
 Reproducibility of Cluster Solutions Using the Bootstrap." *Marketing
 Letters* 21 (March): 83--101.
-:::
 
-::: {#ref-dolnicar2 .csl-entry}
 ---------. 2014. "Using Graphical Statistics to Better Understand Market
 Segmentation Solutions." *International Journal of Market Research* 56
 (March): 207--30.
-:::
 
-::: {#ref-gower .csl-entry}
 Gower, J. 1971. "A General Coefficient of Similarity and Some of Its
 Properties." *Biometrics* 27 (December): 857--71.
-:::
 
-::: {#ref-hahsler .csl-entry}
 Hahsler, M., and K. Hornik. 2011. "Consensus Clustering; Dissimilarity
 Plots; A Visual Exploration Tool for Partitional Clustering." *Journal
 of Computational and Graphical Statistics* 20 (August): 335--54.
 <https://doi.org/10.1198/jcgs.2010.09139>.
-:::
 
-::: {#ref-harikumar .csl-entry}
 Harikumar, S., and S. PV. 2015. "K-Medoid Clustering for Heterogeneous
 Data Sets." *JProcedia Computer Science* 70: 226--37.
 <https://doi.org/10.1016/j.procs.2015.10.077>.
-:::
 
-::: {#ref-huang .csl-entry}
 Huang, Z. 1997. "Clustering Large Data Sets with Mixed Numeric and
 Categorical Values." In *The First Pacific-Asia Conference on Knowledge
 Discovery and Data Mining*, 21--34.
-:::
 
-::: {#ref-leisch2 .csl-entry}
 Leisch, F. 2008. "Visualizing Cluster Analysis and Finite Mixture
 Models." In *Handbook of Data Visualization*, 561--87. Springer Verlag.
-:::
 
-::: {#ref-leisch .csl-entry}
 ---------. 2010. "Neighborhood Graphs, Stripes and Shadow Plots for
 Cluster Visualization." *Statistics and Computing* 20 (October):
 457--69.
-:::
 
-::: {#ref-monti .csl-entry}
 Monti, S., P. Tamayo, J. Mesirov, and T. Golub. 2003. "Consensus
 Clustering; A Resampling-Based Method for Class Discovery and
 Visualization of Gene Expression Microarray Data." *Machine Learning* 52
 (July): 91--118.
-:::
 
-::: {#ref-park .csl-entry}
 Park, H., and C. Jun. 2009. "A Simple and Fast Algorithm for K-Medoids
 Clustering." *Expert Systems with Applications* 36 (2): 3336--41.
 <https://doi.org/10.1016/j.eswa.2008.01.039>.
-:::
 
-::: {#ref-podani .csl-entry}
 Podani, J. 1999. "Extending Gower's General Coefficient of Similarity to
 Ordinal Characters." *Taxon* 48 (May): 331--40.
-:::
 
-::: {#ref-reynolds .csl-entry}
 Reynolds, A. P., G. Richards, B. De La Iglesia, and V. J. Rayward-Smith.
 2006. "Clustering Rules; A Comparison of Partitioning and Hierarchical
 Clustering Algorithms." *Journal of Mathematical Modelling and
 Algorithms* 5 (March): 475--504.
-:::
 
-::: {#ref-rousseeuw .csl-entry}
 Rousseeuw, P. J. 1987. "A Graphical Aid to the Interpretation and
 Validation of Cluster Analysis." *Journal of Computational and Applied
 Mathematics* 20 (November): 53--65.
 <https://doi.org/10.1016/0377-0427(87)90125-7>.
-:::
 
-::: {#ref-wishart .csl-entry}
 Wishart, D. 2003. "K-Means Clustering with Outlier Detection, Mixed
 Variables and Missing Values." In *Exploratory Data Analysis in
 Empirical Research; Proceedings of the 25th Annual Conference of the
 Gesellschaft Fur Klassifikation e.v., University of Munich, March 14-16,
 2001*, 27:216--26. Springer Berlin Heidelberg.
-:::
 
-::: {#ref-yu .csl-entry}
 Yu, D., G. Liu, M. Guo, and X. Liu. 2018. "An Improved K-Medoids
 Algorithm Based on Step Increasing and Optimizing Medoids." *Expert
 Systems with Applications* 92 (February): 464--73.
 <https://doi.org/10.1016/j.eswa.2017.09.052>.
-:::
 
-::: {#ref-zadegan .csl-entry}
 Zadegan, S.M.R, M. Mirzaie, and F. Sadoughi. 2013. "Ranked k-Medoids A
 Fast and Accurate Rank-Based Partitioning Algorithm for Clustering Large
 Datasets." *Knowledge-Based Systems* 39 (February): 133--43.
 <https://doi.org/10.1016/j.knosys.2012.10.012>.
-:::
-:::
-:::
